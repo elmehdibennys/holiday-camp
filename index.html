@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+    content="IE=edge">
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>.:: Holiday Camp ::.</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <a href="#" class="brand">Holiday Camp</a>
+        <div class="navigation">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Program</a>
+            <a href="#">Gallery</a>
+            <a href="#">Contact</a>
+        </div>
+    </header>
+    <section class="home">
+        <video src="1.webm" muted autoplay loop class="video-slider active"></video>
+        <video src="2.webm" muted autoplay loop class="video-slider"></video>
+        <video src="3.webm" muted autoplay loop class="video-slider"></video>
+        <video src="4.webm" muted autoplay loop class="video-slider"></video>
+
+        <div class="content active">
+            <h1>Wonderful, <br>
+            <span>moments</span></h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid, obcaecati voluptatibus. Est repudiandae recusandae facere tenetur quod natus velit, ipsam consequuntur quisquam maiores illo nemo nihil? Magni rerum iste nihil.
+            </p>
+            <a href="#">Read More</a>
+        </div>
+
+        <div class="content">
+            <h1>Beautiful, <br>
+            <span>hotel</span></h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid, obcaecati voluptatibus. Est repudiandae recusandae facere tenetur quod natus velit, ipsam consequuntur quisquam maiores illo nemo nihil? Magni rerum iste nihil.
+            </p>
+            <a href="#">Read More</a>
+        </div>
+
+        <div class="content">
+            <h1>Friendly, <br>
+            <span>Atmosphere</span></h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid, obcaecati voluptatibus. Est repudiandae recusandae facere tenetur quod natus velit, ipsam consequuntur quisquam maiores illo nemo nihil? Magni rerum iste nihil.
+            </p>
+            <a href="#">Read More</a>
+        </div>
+
+
+        <div class="content">
+            <h1>Lovely, <br>
+            <span>attractions</span></h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid, obcaecati voluptatibus. Est repudiandae recusandae facere tenetur quod natus velit, ipsam consequuntur quisquam maiores illo nemo nihil? Magni rerum iste nihil.
+            </p>
+            <a href="#">Read More</a>
+        </div>
+
+    
+        <div class="media-icons">
+            <a href="#"> <i class="fa fa-facebook"></i></a>
+            <a href="#"> <i class="fa fa-instagram"></i></a>
+            <a href="#"> <i class="fa fa-whatsapp"></i></a>
+        </div>
+
+        <div class="slider-navigation">
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+
+        </div>
+    </section>
+    <script>
+        //javascript for video slider
+        const btns = document.querySelectorAll('.nav-btn');
+        const slides = document.querySelectorAll('.video-slider');
+        const contents = document.querySelectorAll('.content');
+
+        var sliderNav = function(index){
+            btns.forEach((btn) => {
+                btn.classList.remove('active');
+            });
+
+            slides.forEach((slide) => {
+                slide.classList.remove('active');
+            });
+
+            contents.forEach((content) => {
+                content.classList.remove('active');
+            });
+
+            btns[index].classList.add('active');
+            slides[index].classList.add('active');
+            contents[index].classList.add('active');
+        }
+        btns.forEach((btn,i) => {
+            btn.addEventListener('click',() => {
+                sliderNav(i);
+            })
+        })
+
+    </script>
+
+
+
+</body>
